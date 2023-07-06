@@ -1,0 +1,85 @@
+.Bio_wrapper{
+    padding-left: 5rem;
+    display: flex;
+    padding-top: 8rem;
+    flex-direction: column;
+}
+
+.Bio_artistDetail_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.Bio_artisDetail_avatar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.avatar{
+    height: 24vh;
+    width: 12vw;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.bio_artistDetail_name{
+    margin-left: 2rem;
+    font-size: 36px;
+    font-weight: bold;
+    color: #424242;
+    text-transform: uppercase;
+}
+
+.Bio_artistDesc{
+    width: 50%;
+    margin-top: 1rem;
+}
+
+.Bio_artistDesc >p{
+    font-size: 17px;
+    color: #424242;
+}
+.Bio_artist_setteng{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 22rem;
+}
+
+.Bio_ArtistSettin_btn{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0 10px;
+    border-radius: 16px;
+    width: 9rem;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+}
+.Bio_ArtistSettin_btn:hover{
+    background-color: black;
+}
+.Bio_artistSetting_icon{
+    cursor: pointer;
+    font-size: 30px;
+    color: tomato;
+}
+
+.Bio_ArtistSong_wrapper{
+    margin-top: 10vh;
+}
+.bio_arttistSong_name{
+    margin-bottom: 2rem;
+    font-size: 33px;
+    font-weight: bold;
+    color: #424242;
+    text-transform: uppercase;
+}
+
+.Bio_ArtistSong_wrapper > hr{
+    margin-bottom: 10px;
+    width:40vw
+}

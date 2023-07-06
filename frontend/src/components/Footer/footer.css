@@ -1,0 +1,36 @@
+.footer{
+    background-color: #FFF9E1;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+.logo{
+    height: 15rem;
+}
+ .logoImg{
+    height: 20rem;
+}
+
+.copyPara{
+    color: #7B7B7B;
+    font-size: 1rem;
+}
+.policy{
+    margin-top: 3vh;
+}
+
+.termslinks{
+    text-decoration: none;
+    margin-right: 10px;
+    color: #4F4F4F;
+    font-size: 1.1rem;
+}
+
+.termslinks:hover{
+    text-decoration: underline;
+   
+}

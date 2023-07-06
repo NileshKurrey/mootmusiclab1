@@ -1,0 +1,98 @@
+.DisplayTrack-wrapper{
+    height: 100%;
+    display: flex;
+    background-color: #E5E5E5;
+}
+
+.currentTrack-wrapper{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 2%;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.allTrack-wrapper{
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.currentTrack-media{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.currentTrack-video{
+    height: 25rem;
+    width: 44rem;
+}
+
+
+
+.createrLink{
+    margin-top: 10px;
+}
+
+.displayTrack_name{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.createrName{
+    text-decoration: none;
+
+}
+
+.createrNameLink{
+    text-decoration: none;
+    color: #898282;
+}
+.createrNameLink:hover{
+    text-decoration: underline;
+    color: #898282;
+}
+
+.relatedArtists{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 10px;
+    height: 2rem;
+}
+
+.artistNameLink{
+    color: black;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.displayTrack_avatar{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* Queue Styling */
+.allTrack_track{
+    margin-bottom: 20px;
+}
+.AllTrack_Items{
+    min-height: 76%;
+    width: 97%;
+    overflow: overlay;
+}

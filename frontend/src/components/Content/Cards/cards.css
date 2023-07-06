@@ -1,0 +1,166 @@
+.card{
+    margin-top: 5vh;
+    width: 18vw;
+    margin-right: 2rem;
+ 
+}
+
+
+.cardImg{
+    width: 18vw;
+    cursor: pointer;
+    position: relative;
+}
+.cardImg >.overlay-image{
+    position: absolute;
+    border-radius: 12px;
+    height: 22vh;
+    width: 18vw;
+    top: 0;
+    left: 0;
+   transform: 1s;
+   background: linear-gradient(to top, rgba(255, 255, 255, 0) 90%, rgba(0,0,0,0)) 91%;
+
+}
+
+.overlay-image:hover{
+    background: linear-gradient(to top, rgba(222, 213, 213, 0)41%, rgba(17,16,16,0.633578431372549) 91%);
+}
+.thumbnail{
+    object-fit: cover;
+    border-radius: 12px;
+    height: 22vh;
+    width: 18vw;
+   
+}
+
+.cardTitle{
+    text-overflow: ellipsis;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+    overflow: hidden;
+    color: #3B3B3B;
+    white-space: nowrap;
+}
+
+.artistname{
+    color: #4B4B4B;
+    font-size: .9rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/* Cards grid section */
+
+.CardGrid{
+    background-color: #bfbaba;
+    width: 20vw;
+    color: white;
+    height: 48px;
+    margin-right: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+
+/* Artist Card */
+
+.artistCard{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.artistimg{
+    width: 18vw;
+    width: 18vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    
+}
+
+.artistpic{
+    cursor: pointer;
+    object-fit: cover;
+    height: 24vh;
+    width: 12vw;
+    border-radius: 50%;
+}
+
+
+.artistName{
+    text-overflow: ellipsis;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+    color: #3B3B3B;
+    white-space: nowrap;
+}
+
+.artistDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 12vh;
+    justify-content: center;
+}
+
+.artistlikes{
+ 
+    color: #4B4B4B;
+    font-size: .9rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Most liked grid */
+.likesGrid{
+    width: 30vw;
+    height: 60px;
+    margin-right: 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.likedThumbnail{
+    height: 6vh;
+    cursor: pointer;
+}
+
+.likedN0{
+    color: #3B3B3B;
+    font-weight: bold;
+}
+.likedTitle{
+    text-overflow: ellipsis;
+    color: #3B3B3B;
+    overflow: hidden;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.songDetails{
+    overflow: hidden;
+    width: 62%;
+}
+.likedArtist{
+    color: #4B4B4B;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}

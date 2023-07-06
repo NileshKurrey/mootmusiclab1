@@ -1,0 +1,273 @@
+.controls-wrapper{
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.play-pause-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.play-pause{
+    display: flex;
+    align-items: center;
+    width: 20vw;
+    justify-content: space-evenly;
+}
+.controls{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    
+}
+.control-btn{
+    border: none;
+    background: none;
+}
+.control-icon, .play-btn{
+    font-size: 30px;
+    cursor: pointer;
+    color: #5F5F5F;
+}
+
+.play-btn{
+    font-size: 55px;
+    color: #FFDE59;
+
+}
+
+.time-details{
+    width: 8vw;
+    line-height: 2vh;
+    color: #5F5F5F;
+}
+.songdetails-cards-grid {
+    width: 35vw;
+    height: 60px;
+    margin-right: 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-evenly;
+    padding-left: 10px;}
+
+
+.songdetails-wrapper-liked-Thumbnail{
+    height: 8vh;
+    width: 15vh;
+    border-radius: 12px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.likedN0{
+    color: #3B3B3B;
+    font-weight: bold;
+}
+.likedTitle{
+    text-overflow: ellipsis;
+    color: #3B3B3B;
+    overflow: hidden;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.songDetails-controls{
+    overflow: hidden;
+    width: 50%;
+}
+.likedArtist{
+    color: #4B4B4B;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.control-icon-color{
+    color: tomato;
+}
+
+
+
+/* progres bar */
+
+
+.progressbar{
+    --range-progress:0;
+    height: 3px;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    scroll-behavior: smooth;
+    background-color: gainsboro;
+  }
+
+  .progressbar::-webkit-slider-runnable-track {
+    height: 3px;
+    appearance: none;
+    outline: none;
+    width: 100%;
+    position: relative;
+    background-color: gainsboro;
+  }
+  .progressbar::-webkit-slider-thumb {
+    height: 17px;
+    width: 17px;
+    border-radius: 16px;
+    background: #FFDE59;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+    z-index: 3;
+    position: relative;
+  }
+  
+  .progressbar::-moz-range-track {
+    height: 3px;
+    appearance: none;
+    outline: none;
+    width: 100%;
+    position: relative;
+    background-color: gainsboro;
+  }
+  .progressbar::-moz-focus-outer{
+    border: 0;
+  }
+  .progressbar::-moz-range-thumb {
+    height: 17px;
+    width: 17px;
+    border-radius: 16px;
+    background: #FFDE59;
+    cursor: pointer;
+    z-index: 3;
+  }
+.progressbar::-moz-progress-bar{
+    background-color: #FFDE59;
+    height: 3px;
+}
+  
+  .progressbar::before {
+    content: '';
+    height: 3px;
+    background: #FFDE59;
+    width: var(--range-progress);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .progressbar:active::-webkit-slider-thumb{
+    transform: scale(1.2);
+  }
+  .progressbar:active::-moz-range-thumb{
+    transform: scale(1.2);
+  }
+
+
+  /* Screen Control */
+
+  .extraContorls{
+    display: flex;
+    width: 40vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.song-volume{
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.queue-icon:hover{
+  color: #2f2f2f;
+}
+
+
+.volume-bar{
+  --volume-progress:100%;
+    height: 3px;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    scroll-behavior: smooth;
+    background-color: gainsboro;
+}
+.volume-bar::-webkit-slider-runnable-track {
+  height: 3px;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  position: relative;
+  background-color: gainsboro;
+}
+
+.volume-bar::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 16px;
+  background: #FFDE59;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+  z-index: 3;
+  position: relative;
+}
+
+.volume-bar::-moz-range-track {
+  height: 3px;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  position: relative;
+  background-color: gainsboro;
+}
+.volume-bar::-moz-focus-outer{
+  border: 0;
+}
+.volume-bar::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 16px;
+  background: #FFDE59;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.progressbar::-moz-progress-bar{
+  background-color: #FFDE59;
+  height: 3px;
+}
+
+.volume-bar::before {
+  content: '';
+  height: 3px;
+  background: #FFDE59;
+  width: var(--volume-progress);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.volume-bar:active::-webkit-slider-thumb{
+  transform: scale(1.2);
+}
+.volume-bar:active::-moz-range-thumb{
+  transform: scale(1.2);
+}

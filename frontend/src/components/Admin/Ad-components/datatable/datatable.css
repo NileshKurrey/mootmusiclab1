@@ -1,0 +1,75 @@
+.datatable {
+    height: 96vh;
+    padding: 20px;
+}
+.datatable .datatableTitle {
+    width: 100%;
+    font-size: 24px;
+    color: gray;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.datatable .datatableTitle .link {
+    text-decoration: none;
+    color: green;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid green;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+.datatable .datatableTitle .link:hover {
+  background-color: green;
+  color: white;
+}
+.datatable .cellWithImg {
+    display: flex;
+    align-items: center;
+}
+.datatable .cellWithImg .cellImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+.datatable .cellWithStatus {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.datatable .cellAction {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.datatable .cellAction .viewButton {
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: darkblue;
+    border: 1px dotted rgba(0, 0, 139, 0.596);
+    cursor: pointer;
+    transition: .3s;
+}
+.datatable .cellAction .viewButton:hover {
+    background-color: darkblue;
+   color: white;
+
+}
+.datatable .cellAction .deleteButton {
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: crimson;
+    border: 1px dotted rgba(220, 20, 60, 0.6);
+    transition: .3s;
+    cursor: pointer;
+}
+.datatable .cellAction .deleteButton:hover {
+   color: white;
+    background-color: crimson;
+
+}

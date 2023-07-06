@@ -1,0 +1,54 @@
+
+.mediaUpload{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    
+}
+.uploadCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    margin-bottom: 10px;
+    width: 15rem;
+}
+
+.uploadIcon{
+    color: white;
+    font-size: 65px;
+}
+
+.mediaUploadCard{
+    width: 60rem;
+    margin-bottom: 5vh;
+    
+}
+.song_loadingbar{
+    width: 80%;
+    height: 90px;
+    display: flex;
+    background-color: aliceblue;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: center;
+}
+.fileUpload{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.musicUpload-wrapper{
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+
+}
+.songUploadDetails{
+    
+    width: 59%;
+}
+.upload-icon{
+    font-size: 60px;
+    color: grey;
+}

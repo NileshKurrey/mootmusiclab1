@@ -1,0 +1,89 @@
+
+.Adnavbar {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: left;
+  flex: 1;
+  min-height: 100vh;
+  width: 14.8vw;
+  background-color: white;
+  border-right: 0.5px solid rgb(230, 227, 227);
+}
+
+.Adnavbar .top {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profilPic-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profilpic{
+  height: 8rem;
+  width: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center;
+  margin: 5px 0px;
+}
+.ad_title_name{
+  font-size: 16px;
+  color: #888;
+}
+.ad-logo{
+  height: 7rem;
+}
+.top > .logo > hr {
+  height: 0;
+  border: 0.5px solid rgb(230, 227, 227);
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.center .title {
+  font-size: 12px;
+  font-weight: bold;
+  color: #999;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.adUlList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.adList {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+  padding: 0;
+  margin: 5px;
+}
+.adList:hover {
+  background-color: #ece8ff;
+}
+
+.adList .icon {
+  font-size: 30px;
+  color: #b39f4b;
+}
+
+.adList span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #4b4b4b;
+  margin-left: 10px;
+}

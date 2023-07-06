@@ -1,0 +1,19 @@
+.player{
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    z-index: 4;
+}
+.track_menu .active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 500ms;
+  }
+  
+  .track_menu .inactive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: 500ms;
+  }
