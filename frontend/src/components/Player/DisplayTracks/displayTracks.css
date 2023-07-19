@@ -36,7 +36,8 @@
 
 
 .createrLink{
-    margin-top: 10px;
+    margin-top: 18px;
+    margin-left: 20vh;
 }
 
 .displayTrack_name{
@@ -95,4 +96,8 @@
     min-height: 76%;
     width: 97%;
     overflow: overlay;
+}
+
+.currentTrackDetails{
+    margin-left: 20vh;
 }

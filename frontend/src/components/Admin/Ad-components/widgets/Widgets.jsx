@@ -1,13 +1,13 @@
 import React from "react";
 import "./widget.css";
-import { BsFillPersonFill, BsShop } from "react-icons/bs";
-import { MdMonetizationOn, MdKeyboardArrowUp } from "react-icons/md";
+import { BsFillPersonFill } from "react-icons/bs";
+import { IoMusicalNoteSharp } from "react-icons/io5";
+import { RiPlayListFill } from "react-icons/ri";
 import { Fragment } from "react";
 function Widgets({ type }) {
   let data;
 
   const amount = 100;
-  const diff = 20;
 
   switch (type) {
     case "users":
@@ -32,7 +32,7 @@ function Widgets({ type }) {
         isMoney: false,
         link: "See all Artists",
         icon: (
-          <BsShop
+          <IoMusicalNoteSharp
             className="icon"
             style={{
               backgroundColor: "rgba(218, 165, 32, 0.2)",
@@ -42,28 +42,12 @@ function Widgets({ type }) {
         ),
       };
       break;
-    case "Advertisers":
-      data = {
-        title: "Adertisers",
-        isMoney: true,
-        link: "view All Adertisers",
-        icon: (
-          <MdMonetizationOn
-            className="icon"
-            style={{
-              color: "crimson",
-              backgroundColor: "rgba(255, 0, 0, 0.2)",
-            }}
-          />
-        ),
-      };
-      break
     case "Songs":
       data = {
         title: "Songs",
         link: "view All Songs",
         icon: (
-          <MdMonetizationOn
+          <RiPlayListFill
             className="icon"
             style={{
               color: "crimson",
@@ -85,13 +69,8 @@ function Widgets({ type }) {
           <span className="counter">
             {data.isMoney && "$"} {amount}
           </span>
-          <span className="link">{data.link}</span>
         </div>
         <div className="right">
-          <div className="percantage postive">
-            <MdKeyboardArrowUp />
-            {diff} %
-          </div>
             {data.icon}
         </div>
       </div>

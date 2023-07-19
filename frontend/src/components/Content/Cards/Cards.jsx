@@ -3,11 +3,12 @@ import './cards.css'
 
 export default function Cards(props) {
 
+  
 
  if(props.propType === 'Cards'){
   return(
     <Fragment>
-      <div className="card">
+      <div className="card" onClick={props.onClick}>
         <div className="cardImg">
           <img src={props.songThumbnail} alt="" className="thumbnail" />
           <div className="overlay-image"></div>
@@ -29,21 +30,21 @@ export default function Cards(props) {
     </Fragment>
   )
  }
- if(props.propType === 'ArtistCard'){
-  return(
-    <Fragment>
-      <div className="artistCard">
-        <div className="artistimg">
-        <img src={props.artistImg} alt="" className="artistpic" />
-        </div>
-        <div className="artistDetails">
-          <h3 className="artistName">{props.artistName}</h3>
-          <p className="artistlikes">25k likes</p>
-        </div>
-      </div>
-    </Fragment>
-  )
- }
+//  if(props.propType === 'ArtistCard'){
+//   return(
+//     <Fragment>
+//       <div className="artistCard">
+//         <div className="artistimg">
+//         <img src={props.artistImg} alt="" className="artistpic" />
+//         </div>
+//         <div className="artistDetails">
+//           <h3 className="artistName">{props.artistName}</h3>
+//           <p className="artistlikes">25k likes</p>
+//         </div>
+//       </div>
+//     </Fragment>
+//   )
+//  }
  if(props.propType === 'LikedCard'){
   return(
     <Fragment>

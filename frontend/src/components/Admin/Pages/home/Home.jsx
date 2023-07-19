@@ -3,15 +3,13 @@ import React from "react";
 import "./home.css";
 import Widgets from "../../Ad-components/widgets/Widgets";
 // import Feature from "../Ad-components/features/Feature";
-import Table from "../../Ad-components/table/Table";
-import Slider from "../../../Content/Slider/Slider";
 import Sidbar from '../../Ad-components/sidebar/Sidebar'
 import AdNavbar from "../../Ad-components/Navbar/AdNavbar";
+import UserTable from "../../Ad-components/UserTable/UserTable";
+import { useSelector } from "react-redux";
+// import SongTable from "../../Ad-components/songTable/SongTable";
 function Home() {
- const titleStyle ={
-    fontSize: '40px',
-    color: "#a6a6a6"
-  }
+ const {user} = useSelector((state)=>state.user)
   return (
     <Fragment>
       <div className="home">
@@ -21,16 +19,17 @@ function Home() {
           <div className="widgets">
             <Widgets type="users" />
             <Widgets type="Artists" />
-            <Widgets type="Advertisers" />
             <Widgets type="Songs" />
           </div>
           <div className="Cards">
-          <Slider  title = {'Most Liked Songs'}  CardsType={'Cards'} style={{width: '80vw'}} titleStyle={titleStyle}/>
-          <Slider  title = {'Most Liked Artist'}  CardsType={'ArtistCard'} style={{width: '80vw'}} titleStyle={titleStyle}/>
+            {/* <div className="listContainer">
+              <div className="listTitle">Letest Songs</div>
+              <SongTable/>
+            </div> */}
           </div>
           <div className="listContainer">
             <div className="listTitle">Latest Users</div>
-           <Table/>
+           <UserTable users={user}/>
           </div>
         </div>
       </div>

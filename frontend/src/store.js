@@ -6,11 +6,13 @@ import { composeWithDevTools } from '@redux-devtools/extension';
 import { userReducer } from './Reducers/userReducers';
 import { allArtistReducer } from './Reducers/artistReducer';
 import { allGenreReducer,createSong } from './Reducers/songReducer';
+import {selectedSongReducer} from './Reducers/selectSongReducer';
 const reducers = combineReducers({
     user:userReducer,
     allArtist:allArtistReducer,
     allGenre:allGenreReducer,
-    song:createSong
+    song:createSong,
+    currentSong:selectedSongReducer
 });
 
 let intialState ={};

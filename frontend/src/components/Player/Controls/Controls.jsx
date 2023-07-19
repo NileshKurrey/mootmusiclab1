@@ -3,18 +3,21 @@ import { Fragment, useState, useEffect, useRef, useCallback, } from 'react'
 import { IoPlaySkipBack, IoPlaySkipForward, } from 'react-icons/io5'
 import { AiFillPlayCircle, AiFillPauseCircle, AiTwotoneHeart } from 'react-icons/ai'
 import {IoMdVolumeOff, IoMdVolumeLow, IoMdVolumeHigh } from 'react-icons/io'
-import song from '../../../assets/song2.mp3'
 import { MdOutlineQueueMusic } from 'react-icons/md'
-
+import { useSelector } from 'react-redux';
+import song from '../../../assets/song2.mp3'
 import './controls.css'
 
 export default function Controls({open,setOpen}) {
+  const {currentSong} = useSelector((state) => state.currentSong);
 
+ const onclickplay = ()=>{
+  console.log(currentSong.author)
+ }
   const playAnimationRef = useRef();
   const volumeRef = useRef();
   const progressBarRef = useRef();
   const audioRef = useRef()
-  let img = 'https://i.ytimg.com/vi/C4NAuQmnuMY/maxresdefault.jpg'
   const [isPlaying, setIsPlaying] = useState(false);
   const [timeProgress, setTimeProgress] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -72,12 +75,14 @@ export default function Controls({open,setOpen}) {
  
   
   useEffect(() => {
-    if (isPlaying) {
-      audioRef.current.play();
-    } else {
-      audioRef.current.pause();
-    }
-    playAnimationRef.current = requestAnimationFrame(repeat);
+      
+      if (isPlaying) {
+        audioRef.current.play();
+      } else {
+        audioRef.current.pause();
+      }
+      playAnimationRef.current = requestAnimationFrame(repeat);
+    
   }, [isPlaying, audioRef, repeat]);
   useEffect(() => {
 
@@ -90,10 +95,22 @@ export default function Controls({open,setOpen}) {
   }, [volume, audioRef,muteVolume]);
   return (
     <Fragment>
-      <audio src={song} ref={audioRef} onLoadedMetadata={onLoadedMetadata} ></audio>
       <div className="controls-wrapper" >
+        {currentSong !==null?<>
+        <audio src={currentSong.url} ref={audioRef} onLoadedMetadata={onLoadedMetadata} ></audio>
+        
+        </>:<>
+        <audio src={song} ref={audioRef} onLoadedMetadata={onLoadedMetadata} ></audio></>}
         <input type="range" name="" id="" className='progressbar' ref={progressBarRef} defaultValue="0"
           onChange={handleProgressChange} />
+
+        {currentSong==null?<>
+          <div className="nullPlayer" style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100%',width:"100%"}}>
+            <h3>
+              Select a Song to display Controls!
+            </h3>
+          </div>
+        </>:<>
         <div className="controls">
           <div className="play-pause-wrapper">
             <div className="play-pause">
@@ -115,11 +132,11 @@ export default function Controls({open,setOpen}) {
 
             <div className="songdetails-cards-grid">
               <div className="img">
-                <img src={img} alt="" className="songdetails-wrapper-liked-Thumbnail" />
+                <img src={currentSong.links.images[1].url} alt="" className="songdetails-wrapper-liked-Thumbnail" />
               </div>
-              <div className="songDetails-controls">
-                <h4 className="likedTitle">Song Name Here</h4>
-                <p className="likedArtist">Nilesh Kurrey -<span> Mere Sona re Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit maiores dolorum reiciendis soluta eius. Voluptatibus tenetur quasi provident. Blanditiis voluptate mollitia ab ullam ex voluptatibus quasi molestias animi voluptates hic!</span></p>
+              <div className="songDetails-controls" onClick={()=> onclickplay()}>
+                <h4 className="likedTitle">{currentSong.name}</h4>
+                <p className="likedArtist">{currentSong.author}-<span> Mere Sona re Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit maiores dolorum reiciendis soluta eius. Voluptatibus tenetur quasi provident. Blanditiis voluptate mollitia ab ullam ex voluptatibus quasi molestias animi voluptates hic!</span></p>
               </div>
               <div className="songlike" onClick={toggleLike}>
                 {isLikes ? <AiTwotoneHeart className='control-icon' /> : <AiTwotoneHeart className='control-icon control-icon-color' />}
@@ -150,6 +167,8 @@ export default function Controls({open,setOpen}) {
           </div>
         </div>
         <div></div>
+        </>}
+     
       </div>
     </Fragment>
   )

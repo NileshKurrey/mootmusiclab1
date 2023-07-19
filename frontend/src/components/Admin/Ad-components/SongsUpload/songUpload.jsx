@@ -219,7 +219,6 @@ function SongUpload() {
                     <Button variant="text" component="label" sx={{ height: 150, border: '3px dashed grey', boxShadow: 'none' }} className="mediaUploadCard">
                         <input hidden type="file" accept='video/*,audio/*' onChange={(e) => (setVideo(e.target.files[0]))} />
                         <span className='upload-icon'>
-
                             Upload Your Music Here
                         </span>
                         <IoAdd className='upload-icon' />

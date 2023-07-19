@@ -54,11 +54,10 @@ import {
 export const loadUser = () => async (dispatch) => {
   try {
     dispatch({ type: LOAD_USER_REQUEST });
-    console.log('Getting My data requested',dispatch({ type: LOAD_USER_REQUEST }))
+
     const { data } = await axios.get(`/api/v1/me`);
     
     dispatch({ type: LOAD_USER_SUCCESS, payload: data.user });
-    console.log('Getting My data success',dispatch({ type: LOAD_USER_SUCCESS, payload: data.user }))
   } catch (error) {
     dispatch({ type: LOAD_USER_FAIL, payload: error.response.data.message });
     console.log(dispatch({ type: LOAD_USER_FAIL, payload: error.response.data.message }))
