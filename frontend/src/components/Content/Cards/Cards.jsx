@@ -21,15 +21,15 @@ export default function Cards(props) {
     </Fragment>
   )
  }
- if(props.propType ==='CardGrid'){
-  return(
-    <Fragment>
-      <div className="CardGrid">
-        <h4 className="genreTitle">Genre</h4>
-      </div>
-    </Fragment>
-  )
- }
+//  if(props.propType ==='CardGrid'){
+//   return(
+//     <Fragment>
+//       <div className="CardGrid">
+//         <h4 className="genreTitle">Genre</h4>
+//       </div>
+//     </Fragment>
+//   )
+//  }
 //  if(props.propType === 'ArtistCard'){
 //   return(
 //     <Fragment>
@@ -45,20 +45,20 @@ export default function Cards(props) {
 //     </Fragment>
 //   )
 //  }
- if(props.propType === 'LikedCard'){
-  return(
-    <Fragment>
-    <div className="likesGrid">
-        <div className="img">
-        <img src={props.songThumbnail} alt="" className="likedThumbnail" />
-        </div>
-        <p className="likedN0">200</p>
-        <div className="songDetails">
-        <h4 className="likedTitle">{props.name}</h4>
-        <p className="likedArtist">{props.artistName} -<span> {props.name}</span></p>
-        </div>
-      </div>
-    </Fragment>
-  )
- }
+//  if(props.propType === 'LikedCard'){
+//   return(
+//     <Fragment>
+//     <div className="likesGrid">
+//         <div className="img">
+//         <img src={props.songThumbnail} alt="" className="likedThumbnail" />
+//         </div>
+//         <p className="likedN0">200</p>
+//         <div className="songDetails">
+//         <h4 className="likedTitle">{props.name}</h4>
+//         <p className="likedArtist">{props.artistName} -<span> {props.name}</span></p>
+//         </div>
+//       </div>
+//     </Fragment>
+//   )
+//  }
 }

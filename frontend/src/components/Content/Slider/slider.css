@@ -54,8 +54,8 @@
 .carousel-container{
 display: flex;
 transition: 2s;
+flex-wrap: wrap;
 scroll-behavior: smooth;
-overflow: hidden;
 }
 
 .carousel-container-grid{
